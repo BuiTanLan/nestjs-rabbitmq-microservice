@@ -12,11 +12,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const microservices_1 = require("@nestjs/microservices");
 let AppController = class AppController {
-    constructor() { }
+    constructor() {
+    }
+    all() {
+        return 'Landep trai';
+    }
     async handleMessagePrinted(data) {
         console.log(data.text);
     }
 };
+__decorate([
+    common_1.Get(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "all", null);
 __decorate([
     microservices_1.EventPattern('message_printed'),
     __metadata("design:type", Function),
