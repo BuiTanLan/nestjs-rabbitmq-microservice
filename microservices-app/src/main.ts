@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, {
     transport: Transport.RMQ,
     options: {
-      urls: ['https://github.com/rengthp/nestjs-rabbitmq-microservice'],
+      urls: ['amqps://dyilfhrb:t-D-bfwdLxkRmp-2B-Q26ALBSa1a9rof@gerbil.rmq.cloudamqp.com/dyilfhrb'],
       queue: 'user-messages',
       queueOptions: {
         durable: false
